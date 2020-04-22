@@ -5,8 +5,8 @@
 
 extern double ave_online(double val,double ave,int i)
 {return ((i-1)*ave)/i + val/i;}
-extern double var_online(double val, double save,int i)
-{return (((i-1)*save)i+pow(val,2)/i)-pow(((i-1)*ave/i)+(val/i));}
+extern double var_online(double val, double save,double ave,int i)
+{return (((i-1)*save)/i+pow(val,2)/i)-pow(((i-1)*ave/i)+(val/i));}
 
 int main(void)
 {
