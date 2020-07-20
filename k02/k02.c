@@ -7,11 +7,16 @@ extern double p_stdnorm(double z);
 
 int main(void)
 {
-    double val;
+    double val,u1,s1,u2,s2,z1,z2,x1,x2,yudo_A=1,yudo_B=1;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
     double L1=1,L2=1;
+
+    u1=170.8;
+    s1=5.43;
+    u2=169.7;
+    s2=5.5;
 
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
@@ -28,6 +33,14 @@ int main(void)
         sscanf(buf,"%lf",&val);
 
 
+        z1=(val-u1)/s1;
+        z2=(val-u2)/s2;
+        x1=p_stdnorm(z1);
+        x2=p_stdnorm(z2);
+        yudo_A=yudo_A*x1;
+        yudo_B=yudo_B*x2;
+
+
     
 
 
@@ -39,8 +52,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",max_val);
-    printf("L_B: %f\n",min_val);
+    printf("L_A: %f\n",yudo_A);
+    printf("L_B: %f\n",yudo_B);
 
     return 0;
 
