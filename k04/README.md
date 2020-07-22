@@ -1,6 +1,6 @@
 # 課題4 レポート
 
-aa83988848 薗田光太郎
+bb35319021 久保田諭
 
 ## 課題
 
@@ -12,29 +12,36 @@ aa83988848 薗田光太郎
 
 ## ソースコードの説明
 
+6 構造体の宣言
+
+25~ ファイルの読み取り
+
+61~ 入力した学生番号と同じ番号があったらその番号の情報（番号、性別、身長）を出力
+
+73 入力した番号がなかったらNo data
+
+77~ ファイルを閉じる
 
 ## 入出力結果
 
 例えば，ID 45313125のデータを調べたいとき，
 
 ```
-Input the filename of sample height : ../sample/heights.csv
-Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313125
----
-ID : 45313125
-gender : Female
-height : 152.4
+input the filename of sample height:../sample/heights.csv
+input the filename of sample ID:../sample/IDs.csv
+Which ID's data do you want? :45313125
+
+NO data
 ```
 
 例えば，ID 45313124のデータを調べたいとき，
 
 ```
-Input the filename of sample height : ../sample/heights.csv
-Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313124
----
-No data
+input the filename of sample height:../sample/heights.csv
+input the filename of sample ID:../sample/IDs.csv
+Which ID's data do you want? :45313124
+
+NO data
 ```
 
 ## 修正履歴
