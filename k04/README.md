@@ -31,7 +31,9 @@ input the filename of sample height:../sample/heights.csv
 input the filename of sample ID:../sample/IDs.csv
 Which ID's data do you want? :45313125
 
-NO data
+ID : 45313125
+GENDER : Female
+HEIGHT : 0.00
 ```
 
 例えば，ID 45313124のデータを調べたいとき，
