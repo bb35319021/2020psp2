@@ -46,8 +46,8 @@ int main(void)
 
     fgets(buf_height,sizeof(buf_height), fp_height);
     while(fgets(buf_height, sizeof(buf_height), fp_height) != NULL && fgets(buf_ID, sizeof(buf_ID), fp_ID) != NULL){
-        sscanf(buf_ID,"%D", &man[n].id);
-        sscanf(buf_height,"%d, %lf", &tb1_gender);
+        sscanf(buf_ID,"%d", &man[n].id);
+        sscanf(buf_height,"%d, %lf", &tb1_gender,&man[n].heights);
         if(tb1_gender == 1){
             strcpy(man[n].gender, "Male");
         }
