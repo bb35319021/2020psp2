@@ -20,6 +20,7 @@ int main(int argc, char* argv[])
     int i;
     double dummy;
 
+    if(argc==4){
 
 
 
@@ -33,11 +34,16 @@ int main(int argc, char* argv[])
     printf("Num of dummy data: %d\n",num_dummy);
     printf("============================================\n");
 
+
     srand(RAND_SEED);
     for(i=1;i<=num_dummy;i++){
         /* r_stdnormを使って，1人のデータを捏造 */
         dummy = r_stdnorm()*sigma+mu;
         printf("%5.2lf\n",dummy);
+    }
+    }
+    else{
+        printf("input error\n");
     }
 
     return 0;
