@@ -19,8 +19,8 @@ int main(void)
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
-int i;
-i=0;
+    int i;
+    i=0;
 
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
