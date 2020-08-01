@@ -11,16 +11,12 @@ extern double p_stdnorm(double z);
 #define sigma_B 5.5
 int main(void)
 {
-    double val,mu1,sigma1,mu2,sigma2,z1,z2,x1,x2,yudo_A=1,yudo_B=1;
+    double val,z1,z2,x1,x2,yudo_A=1,yudo_B=1;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
     
-    mu1=MU_A;
-    sigma1=sigma_A;
-    mu2=MU_B;
-    sigma2=sigma_B;
-
+   
     
     printf("input the filename of sample:");
     fgets(fname,sizeof(fname),stdin);
@@ -37,8 +33,8 @@ int main(void)
         sscanf(buf,"%lf",&val);
 
 
-        z1=(val-mu1)/sigma1;
-        z2=(val-mu2)/sigma2;
+        z1=(val-MU_A)/sigma_A;
+        z2=(val-MU_B)/sigma_B;
         x1=p_stdnorm(z1);
         x2=p_stdnorm(z2);
         yudo_A=yudo_A*x1;
